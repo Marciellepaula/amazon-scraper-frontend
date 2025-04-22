@@ -11,7 +11,7 @@ interface Product {
   image: string;
   name: string;
   rating: string;
-  reviewCount: string;
+  numberOfRatings: string;
 }
 
 function getStarRating(rating: string) {
@@ -28,10 +28,6 @@ searchBtn.addEventListener("click", async () => {
     alert("Please enter a keyword");
     return;
   }
-
-
-
-
 
   resultsDiv.innerHTML = "Loading...";
 
@@ -51,7 +47,7 @@ searchBtn.addEventListener("click", async () => {
           <div class="product-info">
             <h3>${product.name}</h3>
            <p>Rating: ${getStarRating((product.rating))}</p>
-            <p>Reviews: ${product.reviewCount}</p>
+            <p>Reviews: ${product.numberOfRatings}</p>
           </div>
         </div>
       `).join("");
